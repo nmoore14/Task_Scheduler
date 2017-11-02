@@ -76,6 +76,10 @@ body {
 }
 
 /* New User page Styling */
+.login {
+    text-align: center;
+}
+
 .header3 {
     font-family: 'Muli', sans-serif;
     font-weight: 100;

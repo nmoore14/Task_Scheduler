@@ -43,14 +43,15 @@
                 </div>
                 <div class="col-12 col-md-6 col-lg-6 login">
                     <h3 class="header3">New User Application</h3>
+                    <p><small>* Required</small></p>
                     <form class="form-group loginForm" action="#" method="post">
-                        <input class="form-control userFirst" type="text" name="firstname" placeholder="First Name" required />
-                        <input class="form-control userLast" type="text" name="lastname" placeholder="Last Name" required  />
-                        <input class="form-control userEmail" type="email" name="email" placeholder="Email" required  />
-                        <input class="form-control userCell" type="tel" name="phone" placeholder="Cell Phone" required  />
-                        <input class="form-control usernameSel" type="text" name="username" placeholder="Username" required />
-                        <input class="form-control userPW" type="password" name="password" placeholder="Password" autocomplete="off" required />
-                        <input class="form-control pwConfirm" type="password" name="passwordConfirm" placeholder="Re-Enter Password" autocomplete="off" required />
+                        <input class="form-control userFirst" type="text" name="firstname" placeholder="First Name*" required />
+                        <input class="form-control userLast" type="text" name="lastname" placeholder="Last Name*" required  />
+                        <input class="form-control userEmail" type="email" name="email" placeholder="Email*" required  />
+                        <input class="form-control userCell" type="tel" name="phone" placeholder="Cell Phone*" required  />
+                        <input class="form-control usernameSel" type="text" name="username" placeholder="Username*" required />
+                        <input class="form-control userPW" type="password" name="password" placeholder="Password*" autocomplete="off" required />
+                        <input class="form-control pwConfirm" type="password" name="passwordConfirm" placeholder="Re-Enter Password*" autocomplete="off" required />
                         <input class="form-control submitBtn" id="submitBtn" type="submit" value="Submit" />
                         <input class="form-control resetBtn" id="resetBtn" type="reset" value="Clear" />
                     </form>
