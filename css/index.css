@@ -13,6 +13,8 @@ body {
     font-size: 2rem;
 }
 
+/* Login page styling */
+
 .mainContent {
     margin-top: 5rem;
     background-color: rgba(0,0,0,0);
@@ -71,4 +73,30 @@ body {
     font-weight: 300;
     color: #05437c;
     text-decoration: none;
+}
+
+/* New User page Styling */
+.header3 {
+    font-family: 'Muli', sans-serif;
+    font-weight: 100;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: .13rem;
+    border-radius: .13rem;
+}
+
+.needed {
+    background-color: rgba(255, 5, 5, 0.5);
+}
+
+#resetBtn {
+    background-color: rgba(0, 0, 0, 0);
+    border: .13rem solid #e24949;
+    color: #e24949;
+}
+
+#resetBtn:hover {
+    background-color: #e24949;
+    color: white;
+    border-color: rgba(0, 0, 0, 0);
 }

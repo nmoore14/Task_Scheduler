@@ -8,7 +8,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Nick Moore | Task Scheduler</title>
+        <title>Nick Moore | TS Register</title>
 
         <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
 
@@ -42,18 +42,26 @@
                     <!-- Empty for styling -->
                 </div>
                 <div class="col-12 col-md-6 col-lg-6 login">
+                    <h3 class="header3">New User Application</h3>
                     <form class="form-group loginForm" action="#" method="post">
-                        <input class="form-control userN" type="text" name="username" placeholder="Username" />
-                        <input class="form-control userPW" type="password" name="passworkd" placeholder="Password" />
-                        <input class="form-control submitBtn" id="submitBtn" type="submit" value="Enter" />
+                        <input class="form-control userFirst" type="text" name="firstname" placeholder="First Name" required />
+                        <input class="form-control userLast" type="text" name="lastname" placeholder="Last Name" required  />
+                        <input class="form-control userEmail" type="email" name="email" placeholder="Email" required  />
+                        <input class="form-control userCell" type="tel" name="phone" placeholder="Cell Phone" required  />
+                        <input class="form-control usernameSel" type="text" name="username" placeholder="Username" required />
+                        <input class="form-control userPW" type="password" name="password" placeholder="Password" autocomplete="off" required />
+                        <input class="form-control pwConfirm" type="password" name="passwordConfirm" placeholder="Re-Enter Password" autocomplete="off" required />
+                        <input class="form-control submitBtn" id="submitBtn" type="submit" value="Submit" />
+                        <input class="form-control resetBtn" id="resetBtn" type="reset" value="Clear" />
                     </form>
-                    <h5 class="newRegi"><a href="newUser.php">Register</a></h5>
                 </div>
                 <div class="col-12 col-md-3 col-lg-3 empty2">
                     <!-- Empty for styling -->
                 </div>
             </div>
         </div>
+
+
 
         <!-- End of file to help with load times -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
