@@ -3,8 +3,72 @@ html {
     background-color: #757575;
 }
 
+body {
+    background-color: rgba(0,0,0,0);
+}
+
 /* Navbar Styling */
 .navbar-brand {
     font-family: 'Muli', sans-serif;
     font-size: 2rem;
+}
+
+.mainContent {
+    margin-top: 5rem;
+    background-color: rgba(0,0,0,0);
+}
+
+.mainContent .row {
+    background-color: rgba(0,0,0,0);
+}
+
+.empty1, .empty2 {
+    background-color: rgba(0,0,0,0);
+}
+
+.login {
+    background-color: #e6e6e6;
+    padding-top: 1rem;
+    border-radius: 1rem;
+    filter: drop-shadow(2px 2px 2px #000000);
+}
+
+.form-group {
+    text-align: center;
+}
+
+.form-control {
+    width: 25rem;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: .25rem;
+}
+
+#submitBtn {
+    background-color: rgba(0,0,0,0);
+    border: .13rem solid rgb(5, 155, 251);
+    color: #059bfb;
+}
+
+#submitBtn:hover {
+    background-color: #059bfb;
+    color: white;
+    border: none;
+    border: .13rem solid rgba(5, 155, 251, 0);
+}
+
+.newRegi {
+    text-align: center;
+    font-family: 'Muli', sans-serif;
+    font-weight: lighter;
+}
+
+.newRegi > a {
+    color: #059bfb;
+}
+
+.newRegi a:hover {
+    font-weight: 300;
+    color: #05437c;
+    text-decoration: none;
 }
