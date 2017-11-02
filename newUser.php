@@ -8,6 +8,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Nick Moore | TS Register</title>
 
         <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
