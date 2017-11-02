@@ -1,7 +1,7 @@
 <?php
 /*
 * Created by: Nick Moore
-* Description: My portfolio Site
+* Description: Login page for the NESCC Task Scheduler site
 */
 ?>
 <!DOCTYPE html>
