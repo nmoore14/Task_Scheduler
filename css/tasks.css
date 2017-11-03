@@ -1,0 +1,14 @@
+/* font-family: 'Muli', sans-serif; */
+html {
+    background-color: #757575;
+}
+
+body {
+    background-color: rgba(0,0,0,0);
+}
+
+/* Navbar Styling */
+.navbar-brand {
+    font-family: 'Muli', sans-serif;
+    font-size: 2rem;
+}
