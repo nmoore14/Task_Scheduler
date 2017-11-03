@@ -4,6 +4,7 @@
 * Description: New User application for NESCC Task Scheduler site
 */
 ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -47,9 +48,9 @@
                 <div class="col-12 col-md-6 col-lg-6 login">
                     <h3 class="header3">New User Application</h3>
                     <p><small>* Required</small></p>
-                    <form class="form-group loginForm" action="#" method="post">
-                        <input class="form-control userFirst" type="text" name="firstname" placeholder="First Name*" required />
-                        <input class="form-control userLast" type="text" name="lastname" placeholder="Last Name*" required  />
+                    <form class="form-group loginForm" action="newUser.php" method="post">
+                        <input class="form-control userFirst" type="text" name="firstName" placeholder="First Name*" required />
+                        <input class="form-control userLast" type="text" name="lastName" placeholder="Last Name*" required  />
                         <input class="form-control userEmail" type="email" name="email" placeholder="Email*" required  />
                         <input class="form-control userCell" type="tel" name="phone" placeholder="Cell Phone*" required  />
                         <input class="form-control usernameSel" type="text" name="username" placeholder="Username*" required />
