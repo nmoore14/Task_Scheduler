@@ -74,9 +74,14 @@
                     <!-- Empty for styling -->
                 </div>
                 <div class="col-12 col-md-6 col-lg-6 login">
+                    <?php
+                        if($loggedIn == false) {
+                            echo "<h3>Sorry, Username or Password not correct</h3>";
+                        }
+                    ?>
                     <form class="form-group loginForm" action="login.php" method="post">
-                        <input class="form-control userN" type="text" name="username" placeholder="Username" />
-                        <input class="form-control userPW" type="password" name="passworkd" placeholder="Password" />
+                        <input class="form-control userN" type="text" name="userName" placeholder="Username" />
+                        <input class="form-control userPW" type="password" name="password" placeholder="Password" />
                         <input class="form-control submitBtn" id="submitBtn" type="submit" value="Enter" />
                     </form>
                     <h5 class="newRegi"><a href="newUser.php">Register</a></h5>
