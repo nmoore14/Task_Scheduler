@@ -43,6 +43,8 @@
         <title>Nick Moore | Task Scheduler</title>
 
         <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+        <script src="https://use.fontawesome.com/4da6eb03df.js"></script>
+
 
         <link href="https://fonts.googleapis.com/css?family=Muli:300,400,400i,600,800" rel="stylesheet">
         <link rel="stylesheet" href="css/index.css" />
@@ -80,9 +82,21 @@
                         }
                     ?>
                     <form class="form-group loginForm" action="login.php" method="post">
-                        <input class="form-control userN" type="text" name="userName" placeholder="Username" />
-                        <input class="form-control userPW" type="password" name="password" placeholder="Password" />
-                        <input class="form-control submitBtn" id="submitBtn" type="submit" value="Enter" />
+                        <div class="input-group unInput" style="margin-bottom: .25rem;">
+                            <div class="input-group-addon">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <input class="form-control userN" type="text" name="userName" placeholder="Username" />
+                        </div>
+                        <div class="input-group upInput" style="margin-bottom: .25rem;">
+                            <div class="input-group-addon">
+                                <i class="fa fa-lock"></i>
+                            </div>
+                            <input class="form-control userPW" type="password" name="password" placeholder="Password" />
+                        </div>
+                        <div class="input-group">
+                            <input class="form-control submitBtn" id="submitBtn" type="submit" value="Enter" />
+                        </div>
                     </form>
                     <h5 class="newRegi"><a href="newUser.php">Register</a></h5>
                 </div>
@@ -91,6 +105,10 @@
                 </div>
             </div>
         </div>
+        <?php
+            var_dump($_POST['userName']);
+            var_dump($_POST['password']);
+        ?>
 
         <!-- End of file to help with load times -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

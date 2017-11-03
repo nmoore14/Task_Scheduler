@@ -5,7 +5,7 @@
     function isValidUser($userName, $password) {
         $hash = getPasswordHash($userName);
         $isValid = password_verify($password, $hash);
-        return isValid;
+        return $isValid;
     }
 
     function getPasswordHash($userName) {

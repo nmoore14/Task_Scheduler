@@ -12,6 +12,8 @@
         <title>Nick Moore | TS Register</title>
 
         <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+        <script src="https://use.fontawesome.com/4da6eb03df.js"></script>
+
 
         <link href="https://fonts.googleapis.com/css?family=Muli:300,400,400i,600,800" rel="stylesheet">
         <link rel="stylesheet" href="css/index.css" />
