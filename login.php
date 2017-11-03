@@ -4,6 +4,36 @@
 * Description: Login page for the NESCC Task Scheduler site
 */
 ?>
+
+<?php
+    session_start();
+    if($_GET['logout'] == 'yes') {
+        session_unset();
+        session_destroy();
+    }
+
+    if(!empty($_SESSION['user'])) {
+        header('Location: tasksHome.php');
+        exit;
+    }
+
+    include_once('validateUser.php');
+
+    $loggedIn = true;
+    if(isset($_POST['userName'])) {
+        $userName = $_POST['userName'];
+        $password = $_POST['password'];
+
+        if(isValidUser($userName, $password)) {
+            $_SESSION['user'] = $userName;
+            header('Location: tasksHome.php');
+            exit;
+        } else {
+            $loggedIn = false;
+        }
+    }
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -23,7 +53,7 @@
                 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
                     <a class="navbar-brand" href="#">Task Scheduler</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                         <ul class="navbar-nav">
@@ -52,7 +82,7 @@
                     <h5 class="newRegi"><a href="newUser.php">Register</a></h5>
                 </div>
                 <div class="col-12 col-md-3 col-lg-3 empty2">
-                    <!-- Empty for styling -->
+                <!-- Empty for styling -->
                 </div>
             </div>
         </div>
