@@ -1,5 +1,7 @@
 <?php
 
+    $configs = include 'assets/.config.php';
+
     function isValidUser($userName, $password) {
         $hash = getPasswordHash($userName);
         $isValid = password_verify($password, $hash);
@@ -7,9 +9,9 @@
     }
 
     function getPasswordHash($userName) {
-        $user = 'username';
-        $pass = 'password';
-        $dbname = 'database';
+        $user = $configs['username'];
+        $pass = $configs['password'];
+        $dbname = $configs['database'];
         try {
             $pdo = new PDO('mysql:host=localhost;dbname=' . $dbname, $user, $pass);
             $hash = "";
@@ -25,9 +27,9 @@
     }
 
     function getUsersFirstName($userName) {
-        $user = 'username';
-        $pass = 'password';
-        $dbname = 'database';
+        $user = $configs['username'];
+        $pass = $configs['password'];
+        $dbname = $configs['database'];
         try {
             $pdo = new PDO('mysql:host=localhost;dbname=' . $dbname, $user, $pass);
             $firstName = "";
