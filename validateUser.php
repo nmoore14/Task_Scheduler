@@ -1,6 +1,6 @@
 <?php
 
-    $configs = include 'assets/.config.php';
+    $configs = include 'assets/.configs.php';
 
     function isValidUser($userName, $password) {
         $hash = getPasswordHash($userName);
