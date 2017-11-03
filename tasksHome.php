@@ -45,6 +45,23 @@
                         </ul>
                     </div>
                 </nav>
+            </div>
+        </div>
+
+        <!-- The user content area -->
+        <div class="container-fluid userContent">
+            <div class="row">
+                <div class="col-12 col-md-2 col-lg-2">
+                    <!-- Empty for styling -->
+                </div>
+                <div class="col-12 col-md-8 col-lg-8 userHeader">
+                    <h2 class="display-2"><?php echo $firstName; ?></h2>
+                </div>
+                <div class="col-12 col-md-2 col-lg-2">
+                    <!-- Empty for styling -->
+                </div>
+            </div>
+        </div>
 
 
         <!-- End of file to help with load times -->

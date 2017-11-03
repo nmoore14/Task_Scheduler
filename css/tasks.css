@@ -12,3 +12,12 @@ body {
     font-family: 'Muli', sans-serif;
     font-size: 2rem;
 }
+
+/* Content Styling */
+.userHeader {
+    margin-top: 4rem;
+    background-color: rgba(0, 0, 0, 0);
+    border: .13rem solid rgb(5, 155, 251);
+    color: rgb(5, 155, 251);
+    border-radius: 2rem;
+}
