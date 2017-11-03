@@ -23,7 +23,7 @@
     if(isset($_POST['userName'])) {
         $userName = $_POST['userName'];
         $password = $_POST['password'];
-
+        //echo $userName . " " . $password;
         if(isValidUser($userName, $password)) {
             $_SESSION['user'] = $userName;
             header('Location: tasksHome.php');

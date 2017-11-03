@@ -16,7 +16,8 @@
             $hash = "";
             $resultSet = $pdo->query("SELECT Password FROM tasks_user WHERE UserName = '$userName'");
 
-            foreach ($resultSet as $row) {
+            foreach($resultSet as $row)
+            {
                 $hash = $row['Password'];
             }
         } catch(PDOException $err) {
