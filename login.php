@@ -105,10 +105,6 @@
                 </div>
             </div>
         </div>
-        <?php
-            var_dump($_POST['userName']);
-            var_dump($_POST['password']);
-        ?>
 
         <!-- End of file to help with load times -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
