@@ -5,6 +5,11 @@
 */
 ?>
 
+<?php
+    include_once('validateUser.php');
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -49,12 +54,12 @@
                     <h3 class="header3">New User Application</h3>
                     <p><small>* Required</small></p>
                     <form class="form-group loginForm" action="newUser.php" method="post">
-                        <input class="form-control userFirst" type="text" name="firstName" placeholder="First Name*" required />
-                        <input class="form-control userLast" type="text" name="lastName" placeholder="Last Name*" required  />
-                        <input class="form-control userEmail" type="email" name="email" placeholder="Email*" required  />
-                        <input class="form-control userCell" type="tel" name="phone" placeholder="Cell Phone*" required  />
-                        <input class="form-control usernameSel" type="text" name="username" placeholder="Username*" required />
-                        <input class="form-control userPW" type="password" name="password" placeholder="Password*" autocomplete="off" required />
+                        <input class="form-control userFirst" type="text" name="newFirstName" placeholder="First Name*" required />
+                        <input class="form-control userLast" type="text" name="newLastName" placeholder="Last Name*" required  />
+                        <input class="form-control userEmail" type="email" name="newEmail" placeholder="Email*" required  />
+                        <input class="form-control userCell" type="tel" name="newPhone" placeholder="Cell Phone*" required  />
+                        <input class="form-control usernameSel" type="text" name="newUsername" placeholder="Username*" required />
+                        <input class="form-control userPW" type="password" name="newPassword" placeholder="Password*" autocomplete="off" required />
                         <input class="form-control pwConfirm" type="password" name="passwordConfirm" placeholder="Re-Enter Password*" autocomplete="off" required />
                         <input class="form-control submitBtn" id="submitBtn" type="submit" value="Submit" />
                         <input class="form-control resetBtn" id="resetBtn" type="reset" value="Clear" />

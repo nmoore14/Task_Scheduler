@@ -44,4 +44,28 @@
         }
         return $firstName;
     }
+
+    function newUserFirstName($newFirstName) {
+        $checkFirstName = false;
+        if(strlen($newFirstName) >= 3) {
+            $checkFirstName = true;
+            return $checkFirstName;
+        }
+    }
+
+    function newUserLastName($newLastName) {
+        $checkLastName = false;
+        if(strlen($newLastNmae) >= 3) {
+            $checkLastName = true;
+            return $checkLastName;
+        }
+    }
+
+    function newUserEmail($newEmail) {
+        $checkEmail = false;
+        if(filter_var($newEmail, FILTER_VALIDATE_EMAIL)) {
+            $checkEmail = true;
+            return $checkEmail;
+        }
+    }
 ?>
