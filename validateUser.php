@@ -68,4 +68,12 @@
             return $checkEmail;
         }
     }
+
+    function newUserPhone($newPhone) {
+        $checkPhone = false;
+        if(preg_match("/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/", $newPhone)) {
+            $checkPhone = true;
+            return $checkPhone;
+        }
+    }
 ?>
