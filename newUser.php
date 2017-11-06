@@ -16,8 +16,12 @@
     $newPassword = trim($_POST['newPassword']);
     $passwordConfirm = trim($_POST['passwordConfirm']);
 
-    include_once('validateUser.php');
+    include('validateUser.php');
     newUserFirstName($newFirstName);
+    newUserLastName($newLastName);
+    newUserEmail($newEmail);
+    newUserPhone($newPhone);
+    newUser_Name($newUsername);
 ?>
 
 <!DOCTYPE html>

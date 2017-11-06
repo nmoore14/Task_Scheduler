@@ -77,7 +77,7 @@
         }
     }
 
-    funtion newUsername($newUsername) {
+    function newUser_Name($newUsername) {
         $checkUsername = false;
         if(strlen($newUsername) >= 6){
             $checkUsername = true;
