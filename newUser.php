@@ -6,6 +6,9 @@
 ?>
 
 <?php
+
+    include('validateUser.php');
+
     // Set the variables to pass to the validateUser form.
     $newFirstName = trim($_POST['newFirstName']);
     $newLastName = trim($_POST['newLastName']);
@@ -16,7 +19,6 @@
     $newPassword = trim($_POST['newPassword']);
     $passwordConfirm = trim($_POST['passwordConfirm']);
 
-    include('validateUser.php');
     newUserFirstName($newFirstName);
     newUserLastName($newLastName);
     newUserEmail($newEmail);
@@ -80,7 +82,13 @@
                     </form>
                 </div>
                 <div class="col-12 col-md-3 col-lg-3 empty2">
-                    <!-- Empty for styling -->
+                    <?php
+                        var_dump($checkFirstName);
+                        var_dump($checkLastName);
+                        var_dump($checkPhone);
+                        var_dump($checkEmail);
+                        var_dump($checkUsername);
+                    ?>
                 </div>
             </div>
         </div>
