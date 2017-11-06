@@ -88,6 +88,12 @@
                         var_dump($checkPhone);
                         var_dump($checkEmail);
                         var_dump($checkUsername);
+                        echo "<hr />";
+                        var_dump($newFirstName);
+                        var_dump($newLastName);
+                        var_dump($newEmail);
+                        var_dump($newPhone);
+                        var_dump($newUsername);
                     ?>
                 </div>
             </div>
