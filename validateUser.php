@@ -76,4 +76,12 @@
             return $checkPhone;
         }
     }
+
+    funtion newUsername($newUsername) {
+        $checkUsername = false;
+        if(strlen($newUsername) >= 6){
+            $checkUsername = true;
+            return $checkUsername;
+        }
+    }
 ?>
