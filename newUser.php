@@ -6,12 +6,16 @@
 ?>
 
 <?php
+    // Set the variables to pass to the validateUser form.
     $newFirstName = trim($_POST['newFirstName']);
     $newLastName = trim($_POST['newLastName']);
     $newEmail = trim($_POST['newEmail']);
     $newPhone = trim($_POST['newPhone']);
     $newEmail = trim($_POST['newEmail']);
     $newUsername = trim($_POST['newUsername']);
+    $newPassword = trim($_POST['newPassword']);
+    $passwordConfirm = trim($_POST['passwordConfirm']);
+
     include_once('validateUser.php');
     newUserFirstName($newFirstName);
 ?>
