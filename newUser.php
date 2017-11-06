@@ -6,19 +6,15 @@
 ?>
 
 <?php
+    $newFirstName = trim($_POST['newFirstName']);
+    $newLastName = trim($_POST['newLastName']);
+    $newEmail = trim($_POST['newEmail']);
+    $newPhone = trim($_POST['newPhone']);
+    $newEmail = trim($_POST['newEmail']);
+    $newUsername = trim($_POST['newUsername']);
     include_once('validateUser.php');
-
+    newUserFirstName($newFirstName);
 ?>
-
-<script>
-    var pass1 = "";
-    var passCon = "";
-    document.getElementById("newPassword").value = pass1;
-    document.getElementById("passwordConfirm").value = passCon;
-    if(passCon !== pass1 ) {
-        $(".passwordConfirm").addClass("noMatch");
-    }
-</script>
 
 <!DOCTYPE html>
 <html>
