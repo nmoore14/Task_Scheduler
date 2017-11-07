@@ -93,15 +93,16 @@
     function confirmPassword($newPassword, $passwordConfirm) {
         global $passwordCheck;
         $passwordCheck = false;
-        if($newPassword == $passwordConfirm) {
-            $passwordCheck = true;
-            return $passwordCheck;
+        if($newPassword != '') {
+            if($newPassword == $passwordConfirm) {
+                $passwordCheck = true;
+                return $passwordCheck;
+            }
         }
     }
 
-    function addUser($checkFirstName, $checkLastName, $checkEmail, $checkPhone, $checkUsername, $passwordCheck) {
-        if($checkFirstName && $checkLastName && $checkEmail && $checkPhone && $checkUsername && $passwordCheck) {
-            
+    function addUser($newFirstName, $newLastName, $newEmail, $newPhone, $newUsername, $newPassword) {
+
         }
     }
 ?>
