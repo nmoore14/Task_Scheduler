@@ -98,4 +98,10 @@
             return $passwordCheck;
         }
     }
+
+    function addUser($checkFirstName, $checkLastName, $checkEmail, $checkPhone, $checkUsername, $passwordCheck) {
+        if($checkFirstName && $checkLastName && $checkEmail && $checkPhone && $checkUsername && $passwordCheck) {
+            
+        }
+    }
 ?>
