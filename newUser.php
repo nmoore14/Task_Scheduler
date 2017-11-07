@@ -73,7 +73,7 @@
                         <input class="form-control userFirst" type="text" name="newFirstName" placeholder="First Name*" required />
                         <input class="form-control userLast" type="text" name="newLastName" placeholder="Last Name*" required  />
                         <input class="form-control userEmail" type="email" name="newEmail" placeholder="Email*" required  />
-                        <input class="form-control userCell" type="tel" name="newPhone" placeholder="Cell Phone*" required  />
+                        <input class="form-control userCell" type="tel" name="newPhone" placeholder="Cell Phone ###-###-####*" required  />
                         <input class="form-control usernameSel" type="text" name="newUsername" placeholder="Username*" required />
                         <input class="form-control userPW" type="password" name="newPassword" id="newPassword" placeholder="Password*" autocomplete="off" required />
                         <input class="form-control pwConfirm" type="password" name="passwordConfirm" id="passwordConfirm" placeholder="Re-Enter Password*" autocomplete="off" required />
