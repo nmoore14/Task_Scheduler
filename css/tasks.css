@@ -18,6 +18,48 @@ body {
     margin-top: 4rem;
     background-color: #e6e6e6;
     border: .13rem solid rgb(5, 155, 251);
-    color: rgb(5, 155, 251);
+    color: #059bfb;
     border-radius: 2rem;
+}
+
+.userTaskSect {
+    background-color: rgba(0, 0, 0, 0);
+    margin-top: 1rem;
+    border-radius: .5rem;
+}
+
+.userTaskSect .row {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.userTaskSect h3 {
+    padding-bottom: .5rem;
+    margin-top: .25rem;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+.card-header-pills li > a {
+    color: #79c5f6;
+}
+
+.nav-pills > li > a.active {
+    background-color: #035183!important;
+}
+
+.card-header {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: none;
+    border: none;
+}
+
+.card-body {
+    background-color: white;
+}
+
+.myActive {
+    background-color: #035183;
 }

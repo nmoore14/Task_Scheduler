@@ -103,6 +103,5 @@
 
     function addUser($newFirstName, $newLastName, $newEmail, $newPhone, $newUsername, $newPassword) {
 
-        }
     }
 ?>

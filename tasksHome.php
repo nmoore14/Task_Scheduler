@@ -65,6 +65,48 @@
             </div>
         </div>
 
+        <div class="container userTaskSect">
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-12" id="featuredItem">
+                    <div class="card text-center">
+                      <div class="card-header">
+                        <ul class="nav nav-pills card-header-pills">
+                          <li class="nav-item">
+                            <a class="nav-link active" href="#currentTask" id="currentLink">Current Tasks</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#completedTasks" id="completeLink">Completed Tasks</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#allTasks" id="allLink">All Tasks</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#newTask" id="newLink">Create a Task</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="card-body" id="currentTask">
+                        <h4 class="card-title">Current Tasks</h4>
+                        <p class="card-text">Fresh items that have blown our customers minds.</p>
+                      </div>
+                      <div class="card-body" id="completedTasks">
+                        <h4 class="card-title">Competed Tasks</h4>
+                        <p class="card-text">Items straight off the truck.</p>
+                      </div>
+                      <div class="card-body" id="allTasks">
+                        <h4 class="card-title">All Tasks</h4>
+                        <p class="card-text">Here's what we like...today.</p>
+                      </div>
+                    </div>
+                    <div class="card-body" id="newTask">
+                      <h4 class="card-title">New Task</h4>
+                      <p class="card-text">Here's what we like...today.</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
 
         <!-- End of file to help with load times -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -73,5 +115,6 @@
         <script src="bootstrap/bootstrap.min.js"></script>
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <script src="bootstrap/ie10-viewport-bug-workaround.js"></script>
+        <script src="js/index.js"></script>
     </body>
 </html>
