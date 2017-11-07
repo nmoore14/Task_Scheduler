@@ -25,6 +25,10 @@
     newUserPhone($newPhone);
     newUser_Name($newUsername);
     confirmPassword($newPassword, $passwordConfirm);
+
+    if($checkFirstName && $checkLastName && $checkEmail && $checkPhone && $checkUsername && $passwordCheck) {
+        addUser($newFirstName, $newLastName, $newEmail, $newPhone, $newUsername, $newPassword);
+    }
 ?>
 
 <!DOCTYPE html>
