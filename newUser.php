@@ -24,6 +24,7 @@
     newUserEmail($newEmail);
     newUserPhone($newPhone);
     newUser_Name($newUsername);
+    confirmPassword($newPassword, $passwordConfirm);
 ?>
 
 <!DOCTYPE html>
@@ -88,12 +89,15 @@
                         var_dump($checkPhone);
                         var_dump($checkEmail);
                         var_dump($checkUsername);
+                        var_dump($passwordCheck);
                         echo "<hr />";
                         var_dump($newFirstName);
                         var_dump($newLastName);
                         var_dump($newEmail);
                         var_dump($newPhone);
                         var_dump($newUsername);
+                        var_dump($newPassword);
+                        var_dump($passwordConfirm);
                     ?>
                 </div>
             </div>

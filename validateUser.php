@@ -89,4 +89,13 @@
             return $checkUsername;
         }
     }
+
+    function confirmPassword($newPassword, $passwordConfirm) {
+        global $passwordCheck;
+        $passwordCheck = false;
+        if($newPassword == $passwordConfirm) {
+            $passwordCheck = true;
+            return $passwordCheck;
+        }
+    }
 ?>
