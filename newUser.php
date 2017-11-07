@@ -97,6 +97,33 @@
                     ?>
                 </div>
             </div>
+            <div class="row reqContent">
+                <div class="col-12 col-md-3 col-lg-3 empty1">
+                    <!-- Empty for styling -->
+                </div>
+                <div class="col-12 col-md-6 col-lg-6 reqSect">
+                    <ul class="list-group reqList">
+                        <li class="list-group-item reqItem1">
+                            First Name must be at least 3 characters.
+                        </li>
+                        <li class="list-group-item reqItem2">
+                            Last Name must be at least 3 characters.
+                        </li>
+                        <li class="list-group-item reqItem3">
+                            Email must be in the proper format.
+                        </li>
+                        <li class="list-group-item reqItem4">
+                            Use the 10-digit with dashes (-) phone number format.
+                        </li>
+                        <li class="list-group-item reqItem5">
+                            Username must be at least 6 characters.
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3 col-lg-3 empty2">
+                    <!-- Empty for styling -->
+                </div>
+            </div>
         </div>
 
 
