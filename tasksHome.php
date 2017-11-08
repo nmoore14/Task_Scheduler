@@ -29,7 +29,7 @@
         <link rel="stylesheet" href="css/tasks.css" />
     </head>
     <body>
-        include('nav.php');
+        <?php include('nav.php'); ?>
         <!-- The user content area -->
         <div class="container-fluid userContent">
             <div class="row">
