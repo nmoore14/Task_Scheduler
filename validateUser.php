@@ -114,14 +114,14 @@
         $host = $configs['host'];
 
         try {
-            $conn = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
+            $conn = new PDO("mysql:host=localhost;dbname=test", $user, $pass);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $connPass = "Connect Successful";
         } catch(PDOException $e1) {
             $connPass = "Connection Failed";
         }
 
-        $insert_statement = 'INSERT INTO tasks_user(UserEmail, UserCellPhone, UserName, Password, FirstName, LastName, JoinDate, ActiveUser) VALUES(:newEmail, :newPhone, :newUsername, :passHash, :newFirstName, :newLastName, :joinDate, :acitveUser)';
+        $insert_statement = 'INSERT INTO tasks_user(UserEmail, UserCellPhone, UserName, Password, FirstName, LastName, JoinDate, ActiveUser) VALUES(:newEmail, :newPhone, :newUsername, :passHash, :newFirstName, :newLastName, :joinDate, :activeUser)';
         $dateIn = date("Y-m-d H:i:s");
         $insert_params = array(':newEmail' => $newEmail, ':newPhone' => $newPhone, ':newUsername' => $newUsername, ':passHash' => $hash, ':newFirstName' => $newFirstName, ':newLastName'  => $newLastName, ':joinDate' => $dateIn, ':activeUser' => 0);
 
