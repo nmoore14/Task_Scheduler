@@ -16,10 +16,10 @@ body {
 /* Content Styling */
 .userHeader {
     margin-top: 4rem;
-    background-color: #e6e6e6;
+    background-color: white;
     border: .13rem solid rgb(5, 155, 251);
     color: #059bfb;
-    border-radius: 2rem;
+    border-radius: 1rem;
 }
 
 .userTaskSect {
@@ -58,6 +58,7 @@ body {
 
 .card-body {
     background-color: white;
+    border-radius: .5rem;
 }
 
 .myActive {
