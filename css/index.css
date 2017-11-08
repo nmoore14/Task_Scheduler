@@ -13,8 +13,43 @@ body {
     font-size: 2rem;
 }
 
-/* Login page styling */
+/* Index/Landing Page styling */
+.titleHead {
+    font-family: 'Muri', sans-serif;
+    font-weight: lighter;
+    font-size: 5rem;
+    text-align: center;
+}
 
+.mainBody {
+    background-image: url('../../images/notebook1.jpg');
+    height: 1000px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.buttonArea {
+    margin-top: .5rem;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #059bfb!important;
+    border: .25rem solid #059bfb!important;
+    width: 20rem;
+    height: 5rem;
+    padding-top: 1rem;
+    font-family: 'Muri', sans-serif;
+    font-size: 2rem;
+    font-weight: lighter;
+}
+
+.btn-primary:hover {
+    background-color: rgba(0, 0, 0, 0)!important;
+}
+
+/* Login page styling */
 .mainContent {
     margin-top: 5rem;
     background-color: rgba(0,0,0,0);
@@ -48,7 +83,7 @@ body {
 
 #submitBtn {
     background-color: rgba(0,0,0,0);
-    border: .13rem solid rgb(5, 155, 251);
+    border: .13rem solid #059bfb;
     color: #059bfb;
 }
 

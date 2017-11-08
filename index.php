@@ -21,6 +21,25 @@
         <link rel="stylesheet" href="css/index.css" />
     </head>
     <body>
+        <div class="container-fluid mainBody">
+            <div class="row">
+              <div class="col-12 col-md-12 col-lg-12">
+                <h1 class="titleHead">Task Scheduler</h1>
+              </div>
+            </div>
+          <div class="row">
+              <div class="col-12 col-md-3 col-lg-3 empty1">
+                <!-- Empty for styling -->
+              </div>
+              <div class="col-12 col-md-6 col-lg-6 buttonArea">
+                <a class="btn btn-primary" href="login.php" role="button" id="loginBtn">Login</a>
+                <a class="btn btn-primary" href="newUser.php" role="button" id="newUserBtn">Create Account</a>
+              </div>
+              <div class="col-12 col-md-3 col-lg-3 empty2">
+                  <!-- Empty for styling -->
+              </div>
+          </div>
+        </div>
 
         <!-- End of file to help with load times -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

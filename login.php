@@ -50,6 +50,7 @@
         <link rel="stylesheet" href="css/index.css" />
     </head>
     <body>
+        <?php include('nav.php'); ?>
         <div class="container-fluid mainContent">
             <div class="row">
                 <div class="col-12 col-md-3 col-lg-3 empty1">
