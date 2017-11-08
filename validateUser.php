@@ -102,6 +102,37 @@
     }
 
     function addUser($newFirstName, $newLastName, $newEmail, $newPhone, $newUsername, $newPassword) {
+        global $pass;
+        global $connPass;
+        global $e1;
+        global $e2;
+        $password = $newPassword;
+        $hash = password_hash($password, PASSWORD_DEFAULT);
+        $user = $configs['username'];
+        $pass = $configs['password'];
+        $db = $configs['database'];
+        $host = $configs['host'];
+
+        try {
+            $conn = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $connPass = "Connect Successful";
+        } catch(PDOException $e1) {
+            $connPass = "Connection Failed";
+        }
+
+        $insert_statement = 'INSERT INTO tasks_user(UserEmail, UserCellPhone, UserName, Password, FirstName, LastName, JoinDate, ActiveUser) VALUES(:newEmail, :newPhone, :newUsername, :passHash, :newFirstName, :newLastName, :joinDate, :acitveUser)';
+        $dateIn = date("Y-m-d H:i:s");
+        $insert_params = array(':newEmail' => $newEmail, ':newPhone' => $newPhone, ':newUsername' => $newUsername, ':passHash' => $hash, ':newFirstName' => $newFirstName, ':newLastName'  => $newLastName, ':joinDate' => $dateIn, ':activeUser' => 0);
+
+        try {
+            $insert = $conn->prepare($insert_statement);
+            $insert->execute($insert_params);
+            $last_id = $conn->lastInsertId();
+            $pass = "Query has been executed.";
+        } catch(PDOException $e2) {
+            $pass = "Query failed.";
+        }
 
     }
 ?>

@@ -83,6 +83,11 @@
                         var_dump($newUsername);
                         var_dump($newPassword);
                         var_dump($passwordConfirm);
+                        echo"<hr />";
+                        var_dump($connPass);
+                        var_dump($e1);
+                        var_dump($pass);
+                        var_dump($e2);
                     ?>
                 </div>
             </div>
