@@ -6,7 +6,7 @@
 ?>
 
 <?php
-
+    session_start();
     include('validateUser.php');
 
     // Set the variables to pass to the validateUser form.
@@ -28,6 +28,10 @@
 
     if($checkFirstName && $checkLastName && $checkEmail && $checkPhone && $checkUsername && $passwordCheck) {
         addUser($newFirstName, $newLastName, $newEmail, $newPhone, $newUsername, $newPassword);
+        $_SESSION['newEmail'] = $newEmail;
+        $_SESSION['newCell'] = $newPhone;
+        header('Location: confirmNewUser.php');
+        exit;
     }
 ?>
 
