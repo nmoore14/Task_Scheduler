@@ -1,10 +1,12 @@
 /* font-family: 'Muli', sans-serif; */
 html {
     background-color: #757575;
+    height: 100%;
 }
 
 body {
     background-color: rgba(0,0,0,0);
+    height: 100%;
 }
 
 /* Navbar Styling */
@@ -23,7 +25,7 @@ body {
 
 .mainBody {
     background-image: url('../../images/notebook1.jpg');
-    height: 1000px;
+    height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
@@ -77,6 +79,16 @@ body {
 .infoRight p {
     font-size: 14pt;
     font-weight: 200;
+}
+
+.footer {
+    z-index: 100;
+    margin-top: -5rem;
+}
+
+.footer .navbar-btn {
+    background-color: #035183;
+    color: white;
 }
 
 /* Login page styling */

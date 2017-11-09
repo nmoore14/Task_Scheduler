@@ -63,6 +63,15 @@
           </div>
         </div>
 
+        <div class="navbar navbar-default navbar-fixed-bottom footer">
+            <div class="container">
+                <p class="navbar-text pull-left">© 2017 - Site Built By Nick Moore.
+                </p>
+                <a href="https://github.com/nmoore14" class="navbar-btn btn pull-right">
+                <span class="glyphicon glyphicon-star"></span><i class="fa fa-github"></i> Check out my GitHub</a>
+            </div>
+        </div>
+
         <!-- End of file to help with load times -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="bootstrap/jquery.min.js"><\/script>')</script>
