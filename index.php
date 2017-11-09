@@ -17,7 +17,7 @@
         <script src="https://use.fontawesome.com/4da6eb03df.js"></script>
 
 
-        <link href="https://fonts.googleapis.com/css?family=Muli:300,400,400i,600,800" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Dosis:200,400,600" rel="stylesheet">
         <link rel="stylesheet" href="css/index.css" />
     </head>
     <body>
@@ -38,6 +38,17 @@
               <div class="col-12 col-md-3 col-lg-3 empty2">
                   <!-- Empty for styling -->
               </div>
+          </div>
+          <div class="row infoPane">
+            <div class="col-12 col-md-8 col-lg-8 infoLeft">
+                <h1 class="display-2">Organization</h1>
+                <p class="orgDesc">
+                    Have a hectic schedule? Let the Task Scheduler help bring your schedule to the forefront and make sense of the mess.
+                </p>
+            </div>
+            <div class="col-12 col-md-4 col-lg-4">
+              <!-- Empty for styling -->
+            </div>
           </div>
         </div>
 

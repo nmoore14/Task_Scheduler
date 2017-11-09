@@ -1,7 +1,7 @@
 <?php
 
-    // TODO: Make all of the queries a prepared statments.
-    // TODO: If the checks in the registration form comeback false have it create a color background for the form on newUser.php
+    // TODO:10 Make all of the queries a prepared statments.
+    // TODO:0 0 If the checks in the registration form comeback false have it create a color background for the form on newUser.php
 
     $configs = include 'assets/.config.php';
 

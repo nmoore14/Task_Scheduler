@@ -15,7 +15,7 @@ body {
 
 /* Index/Landing Page styling */
 .titleHead {
-    font-family: 'Muri', sans-serif;
+    font-family: 'Dosis', sans-serif;
     font-weight: lighter;
     font-size: 5rem;
     text-align: center;
@@ -40,13 +40,31 @@ body {
     width: 20rem;
     height: 5rem;
     padding-top: 1rem;
-    font-family: 'Muri', sans-serif;
+    font-family: 'Dosis', sans-serif;
     font-size: 2rem;
     font-weight: lighter;
 }
 
 .btn-primary:hover {
     background-color: rgba(0, 0, 0, 0)!important;
+}
+
+.infoPane .infoLeft {
+    background-color: rgba(255, 255, 255, .75);
+    color: #000000;
+    margin-top: 1rem;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.infoLeft h1 {
+    font-family: 'Dosis', sans-serif;
+    font-weight: lighter;
+}
+
+.infoLeft p {
+    font-size: 14pt;
+    font-weight: 200;
 }
 
 /* Login page styling */
