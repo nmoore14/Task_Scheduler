@@ -50,6 +50,17 @@
               <!-- Empty for styling -->
             </div>
           </div>
+          <div class="row infoPane">
+              <div class="col-12 col-md-4 col-lg-4">
+                <!-- Empty for styling -->
+              </div>
+            <div class="col-12 col-md-8 col-lg-8 infoRight">
+                <h1 class="display-2">Ease of Use</h1>
+                <p class="orgDesc">
+                    Ease of Use + Heavy lifting of your data. Sit back and let the app do it for you.
+                </p>
+            </div>
+          </div>
         </div>
 
         <!-- End of file to help with load times -->

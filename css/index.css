@@ -49,7 +49,7 @@ body {
     background-color: rgba(0, 0, 0, 0)!important;
 }
 
-.infoPane .infoLeft {
+.infoPane .infoLeft, .infoRight {
     background-color: rgba(255, 255, 255, .75);
     color: #000000;
     margin-top: 1rem;
@@ -60,9 +60,21 @@ body {
 .infoLeft h1 {
     font-family: 'Dosis', sans-serif;
     font-weight: lighter;
+    text-align: right;
 }
 
 .infoLeft p {
+    text-align: right;
+    font-size: 14pt;
+    font-weight: 200;
+}
+
+.infoRight h1 {
+    font-family: 'Dosis', sans-serif;
+    font-weight: lighter;
+}
+
+.infoRight p {
     font-size: 14pt;
     font-weight: 200;
 }
