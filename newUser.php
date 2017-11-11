@@ -35,9 +35,15 @@
     }
 
     // Error array
-    $errorDisp = array( 'fnError' => array("First Name", "Your first name needs to be 3 characters or longer."),
-                            'lnError' => array("Last Name", "Your last name needs to be 3 characters or longer"),
-                            )
+    $errorCheck = array();
+    $_SESSION['errorCheck'];
+    $errorDisp = array( 'fnError' => array("First Name Error", "Your first name needs to be 3 characters or longer."),
+                            'lnError' => array("Last Name Error", "Your last name needs to be 3 characters or longer."),
+                            'emError' => array("Email Error", "Your email is not valid, please review and correct."),
+                            'phError' => array("Phone Number Error", "Please enter your phone number in the correct format."),
+                            'unError1' => array("Username Error 1", "Your username needs to be 6 characters or more."),
+                            'pwError1' => array("Password Error 1", "Your password and confirmed password do not match.")
+                        );
 ?>
 
 <!DOCTYPE html>
@@ -59,7 +65,16 @@
         <div class="container-fluid mainContent">
             <div class="row">
                 <div class="col-12 col-md-3 col-lg-3 empty1">
-                    <!-- Empty for styling -->
+                    <?php
+                        // Check to see if the errorCheck array has content and if it does pull the errorDisp codes.
+                        if (count($errorCheck) > 0) {
+                            foreach ($errorCheck as $key) {
+                                echo ("<div class='alert alert-primary' role='alert'>
+                                            <h4>" . $errorDisp[$key][0] . "</h4><h6>"  . $errorDisp[$key][0] . "</h6>
+                                         </div>");
+                            }
+                        }
+                    ?>
                 </div>
                 <div class="col-12 col-md-6 col-lg-6 login">
                     <h3 class="header3">New User Application</h3>
@@ -97,6 +112,8 @@
                         var_dump($e1);
                         var_dump($pass);
                         var_dump($e2);
+                        echo'<hr />';
+                        var_dump($errorCheck);
                     ?>
                 </div>
             </div>

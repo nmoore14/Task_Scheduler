@@ -2,12 +2,11 @@
 
     // Set and declare sesion variables
     session_start();
-    $_SESSION['errorCheck'] = $errorCheck;
 
     $configs = include 'assets/.config.php';
 
     // Variables needed by multiple functions that are not declared outside of this page.
-    $errorCheck = array();
+    $errorCheck = $_SESSION['errorCheck'];
 
     function isValidUser($userName, $password) {
         $hash = getPasswordHash($userName);
