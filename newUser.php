@@ -33,6 +33,11 @@
         header('Location: confirmNewUser.php');
         exit;
     }
+
+    // Error array
+    $errorDisp = array( 'fnError' => array("First Name", "Your first name needs to be 3 characters or longer."),
+                            'lnError' => array("Last Name", "Your last name needs to be 3 characters or longer"),
+                            )
 ?>
 
 <!DOCTYPE html>

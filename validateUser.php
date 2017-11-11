@@ -1,9 +1,13 @@
 <?php
 
-    // TODO:10 Make all of the queries a prepared statments.
-    // TODO:0 0 If the checks in the registration form comeback false have it create a color background for the form on newUser.php
+    // Set and declare sesion variables
+    session_start();
+    $_SESSION['errorCheck'] = $errorCheck;
 
     $configs = include 'assets/.config.php';
+
+    // Variables needed by multiple functions that are not declared outside of this page.
+    $errorCheck = array();
 
     function isValidUser($userName, $password) {
         $hash = getPasswordHash($userName);
@@ -54,6 +58,8 @@
         if(strlen($newFirstName) >= 3) {
             $checkFirstName = true;
             return $checkFirstName;
+        } else {
+            $errorCheck[] = "fnError";
         }
     }
 
@@ -63,6 +69,8 @@
         if(strlen($newLastName) >= 3) {
             $checkLastName = true;
             return $checkLastName;
+        } else {
+            $errorCheck[] = "lnError";
         }
     }
 
@@ -72,6 +80,8 @@
         if(filter_var($newEmail, FILTER_VALIDATE_EMAIL)) {
             $checkEmail = true;
             return $checkEmail;
+        } else {
+            $errorCheck[] = "emError";
         }
     }
 
@@ -81,6 +91,8 @@
         if(preg_match("/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/", $newPhone)) {
             $checkPhone = true;
             return $checkPhone;
+        } else {
+            $errorCheck[] = "phError";
         }
     }
 
@@ -90,6 +102,8 @@
         if(strlen($newUsername) >= 6){
             $checkUsername = true;
             return $checkUsername;
+        } else {
+            $errorCheck[] = "unError1";
         }
     }
 
@@ -101,6 +115,8 @@
                 $passwordCheck = true;
                 return $passwordCheck;
             }
+        } else {
+            $errorCheck[] = "pwError1";
         }
     }
 
