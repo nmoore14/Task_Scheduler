@@ -52,7 +52,7 @@
               <!-- Empty for styling -->
             </div>
             <div class="col-12 col-md-4 col-lg-4">
-                <form class="form-group activateUser" method="post" action="#">
+                <form class="form-group activateUser" method="post" action="mail/mail.php">
                     <div class="custom-controls-stacked">
                         <label class="custom-control custom-radio">
                             <input id="radio1" name="radio" type="radio" value="cellPhone" class="custom-control-input">

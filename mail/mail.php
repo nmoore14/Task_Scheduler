@@ -9,6 +9,10 @@ require './PHPMailer-master/src/Exception.php';
 require './PHPMailer-master/src/PHPMailer.php';
 require './PHPMailer-master/src/SMTP.php';
 
+session_start();
+$userEmail = $_SESSION['newEmail'];
+$newUserName = 
+
 
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
 
