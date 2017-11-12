@@ -6,7 +6,9 @@
     $configs = include 'assets/.config.php';
 
     // Variables needed by multiple functions that are not declared outside of this page.
-    $errorCheck = $_SESSION['errorCheck'];
+    global $errorCheck;
+    $errorCheck = array();
+    $_SESSION['errorCheck'] = $errorCheck;
 
     function isValidUser($userName, $password) {
         $hash = getPasswordHash($userName);
@@ -58,7 +60,8 @@
             $checkFirstName = true;
             return $checkFirstName;
         } else {
-            $errorCheck[] = "fnError";
+            $errorCheck[] = 'fnError';
+            return $errorCheck;
         }
     }
 
@@ -69,7 +72,8 @@
             $checkLastName = true;
             return $checkLastName;
         } else {
-            $errorCheck[] = "lnError";
+            $errorCheck[] = 'lnError';
+            return $errorCheck;
         }
     }
 
@@ -80,7 +84,8 @@
             $checkEmail = true;
             return $checkEmail;
         } else {
-            $errorCheck[] = "emError";
+            $errorCheck[] = 'emError';
+            return $errorCheck;
         }
     }
 
@@ -91,7 +96,8 @@
             $checkPhone = true;
             return $checkPhone;
         } else {
-            $errorCheck[] = "phError";
+            $errorCheck[] = 'phError';
+            return $errorCheck;
         }
     }
 
@@ -102,20 +108,22 @@
             $checkUsername = true;
             return $checkUsername;
         } else {
-            $errorCheck[] = "unError1";
+            $errorCheck[] = 'unError1';
+            return $errorCheck;            return $errorCheck;
         }
     }
 
     function confirmPassword($newPassword, $passwordConfirm) {
         global $passwordCheck;
         $passwordCheck = false;
-        if($newPassword != '') {
+        if($newPassword != '' && strlen($newPassword) >= 6) {
             if($newPassword == $passwordConfirm) {
                 $passwordCheck = true;
                 return $passwordCheck;
             }
         } else {
-            $errorCheck[] = "pwError1";
+            $errorCheck[] = 'pwError';
+            return $errorCheck;
         }
     }
 

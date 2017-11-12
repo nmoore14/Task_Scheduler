@@ -35,14 +35,13 @@
     }
 
     // Error array
-    $errorCheck = array();
-    $_SESSION['errorCheck'];
+    $errorCheck = $_SESSION['errorCheck'];
     $errorDisp = array( 'fnError' => array("First Name Error", "Your first name needs to be 3 characters or longer."),
                             'lnError' => array("Last Name Error", "Your last name needs to be 3 characters or longer."),
                             'emError' => array("Email Error", "Your email is not valid, please review and correct."),
                             'phError' => array("Phone Number Error", "Please enter your phone number in the correct format."),
                             'unError1' => array("Username Error 1", "Your username needs to be 6 characters or more."),
-                            'pwError1' => array("Password Error 1", "Your password and confirmed password do not match.")
+                            'pwError1' => array("Password Error", "Your password needs to be 6 characters or longer and match the confirm password entry.")
                         );
 ?>
 
@@ -86,7 +85,7 @@
                         <input class="form-control userCell" type="tel" name="newPhone" placeholder="Cell Phone ###-###-####*" required  />
                         <input class="form-control usernameSel" type="text" name="newUsername" placeholder="Username*" required />
                         <input class="form-control userPW" type="password" name="newPassword" id="newPassword" placeholder="Password*" autocomplete="off" required />
-                        <input class="form-control pwConfirm" type="password" name="passwordConfirm" id="passwordConfirm" placeholder="Re-Enter Password*" autocomplete="off" required />
+                        <input class="form-control pwConfirm" type="password" name="passwordConfirm" id="passwordConfirm" placeholder="Confirm Password*" autocomplete="off" required />
                         <input class="form-control submitBtn" id="submitBtn" type="submit" value="Submit" />
                         <input class="form-control resetBtn" id="resetBtn" type="reset" value="Clear" />
                     </form>
@@ -113,7 +112,7 @@
                         var_dump($pass);
                         var_dump($e2);
                         echo'<hr />';
-                        var_dump($errorCheck);
+                        var_dump($_SESSION['errorCheck']);
                     ?>
                 </div>
             </div>
