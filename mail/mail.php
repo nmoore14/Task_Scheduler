@@ -11,7 +11,7 @@ require './PHPMailer-master/src/SMTP.php';
 
 session_start();
 $userEmail = $_SESSION['newEmail'];
-$newUserName = 
+$newUserName = $_SESSION['newUser'];
 
 
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
@@ -24,7 +24,7 @@ try {
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
     $mail->Username = EMAIL;                            // SMTP username - create an outlook account
     $mail->Password = PASSWORD;                          // SMTP password
-    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+    $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 587;                                    // TCP port to connect to
 
     //Recipients

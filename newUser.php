@@ -30,6 +30,7 @@
         addUser($newFirstName, $newLastName, $newEmail, $newPhone, $newUsername, $newPassword);
         $_SESSION['newEmail'] = $newEmail;
         $_SESSION['newCell'] = $newPhone;
+        $_SESSION['newUser'] = $newUsername;
         header('Location: confirmNewUser.php');
         exit;
     }
