@@ -4,21 +4,20 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 
-require 'mailerconfig.php';
+require '../assets/mailerconfig.php';
 require './PHPMailer-master/src/Exception.php';
 require './PHPMailer-master/src/PHPMailer.php';
 require './PHPMailer-master/src/SMTP.php';
 
 session_start();
 $userEmail = $_SESSION['newEmail'];
-$newUserName = 
-
+$newUserName = $_SESSION['newUser'];
 
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
 
 try {
     //Server settings
-    $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+    $mail->SMTPDebug = 1;                                 // Enable verbose debug output
     $mail->isSMTP();                                      // Set mailer to use SMTP
     $mail->Host = 'smtp.outlook.com';//;smtp2.example.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
@@ -29,7 +28,7 @@ try {
 
     //Recipients
     $mail->setFrom(EMAIL, 'Mailer');
-    $mail->addAddress('sendto@email.com', 'Name');    // Add a recipient
+    $mail->addAddress($userEmail, $newUserName);    // Add a recipient
     //$mail->addAddress('ellen@example.com');             // Name is optional
     $mail->addReplyTo(EMAIL, 'Information'); //can be different than the sender. Populates the reply email address.
     //$mail->addCC('cc@example.com');
@@ -43,13 +42,14 @@ try {
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Activation request for your new NE Blog Account';
 
-    $msg = "<i>Thanks for joining. You must activate your account before you can use it:</i><br><a href='http://cscilinux.northeaststate.edu/~robowman'>Click here to activate your account</a>";
+    $msg = "<i>Thanks for joining. You must activate your account before you can use it:</i><br><a href='http://cscilinux.northeaststate.edu/~nmoore2'>Click here to activate your account</a>";
     $mail->Body    = $msg;
 
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();
-    echo 'Message has been sent';
+    header("Location: ../login.php");
+    exit();
 } catch (Exception $e) {
     echo 'Message could not be sent.';
     echo 'Mailer Error: ' . $mail->ErrorInfo;
