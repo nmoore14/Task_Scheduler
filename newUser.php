@@ -26,14 +26,12 @@ newUserPhone($newPhone);
 newUser_Name($newUsername);
 confirmPassword($newPassword, $passwordConfirm);
 
-<<<<<<< HEAD
 $checkFirstName = $_SESSION['checkFirstName'];
 $checkLastName = $_SESSION['checkLastName'];
 $checkEmail = $_SESSION['checkEmail'];
 $checkPhone = $_SESSION['checkPhone'];
 $checkUsername = $_SESSION['checkUsername'];
 $passwordCheck = $_SESSION['passwordCheck'];
-=======
     if($checkFirstName && $checkLastName && $checkEmail && $checkPhone && $checkUsername && $passwordCheck) {
         addUser($newFirstName, $newLastName, $newEmail, $newPhone, $newUsername, $newPassword);
         $_SESSION['newEmail'] = $newEmail;
@@ -42,8 +40,7 @@ $passwordCheck = $_SESSION['passwordCheck'];
         header('Location: confirmNewUser.php');
         exit;
     }
->>>>>>> 59f614fd9dbf36769f108856b4179895c534e06c
-
+    
 if($checkFirstName && $checkLastName && $checkEmail && $checkPhone && $checkUsername && $passwordCheck) {
     addUser($newFirstName, $newLastName, $newEmail, $newPhone, $newUsername, $newPassword);
     $_SESSION['newEmail'] = $newEmail;
