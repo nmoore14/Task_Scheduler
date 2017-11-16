@@ -20,7 +20,7 @@ function getPasswordHash($userName) {
     $user = USERNAME;
     $pass = PASSWORD;
     try {
-        $pdo = new PDO('mysql:host=localhost;dbname=nmoore2', $user, $pass);
+        $pdo = new PDO('mysql:host=localhost;dbname=test', $user, $pass);
         $hash = "";
         $resultSet = $pdo->query("SELECT Password FROM tasks_user WHERE UserName = '$userName'");
 
@@ -39,7 +39,7 @@ function getUsersFirstName($userName){
     $pass = PASSWORD;
 
     try {
-        $pdo = new PDO('mysql:host=localhost;dbname=nmoore2', $user, $pass);
+        $pdo = new PDO('mysql:host=localhost;dbname=test', $user, $pass);
         $firstName = "";
         $resultSet = $pdo->query("SELECT FirstName FROM tasks_user WHERE UserName = '$userName'");
 
@@ -154,7 +154,7 @@ function addUser($newFirstName, $newLastName, $newEmail, $newPhone, $newUsername
     $host = HOST;
 
     try {
-        $conn = new PDO("mysql:host=localhost;dbname=nmoore2", $user, $pass);
+        $conn = new PDO("mysql:host=localhost;dbname=test", $user, $pass);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $connPass = "Connect Successful";
     } catch(PDOException $e1) {
