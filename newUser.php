@@ -6,32 +6,33 @@
 ?>
 
 <?php
-session_start();
-include('validateUser.php');
+    session_start();
+    include('validateUser.php');
 
-// Set the variables to pass to the validateUser form.
-$newFirstName = trim($_POST['newFirstName']);
-$newLastName = trim($_POST['newLastName']);
-$newEmail = trim($_POST['newEmail']);
-$newPhone = trim($_POST['newPhone']);
-$newEmail = trim($_POST['newEmail']);
-$newUsername = trim($_POST['newUsername']);
-$newPassword = trim($_POST['newPassword']);
-$passwordConfirm = trim($_POST['passwordConfirm']);
+    // Set the variables to pass to the validateUser form.
+    $newFirstName = trim($_POST['newFirstName']);
+    $newLastName = trim($_POST['newLastName']);
+    $newEmail = trim($_POST['newEmail']);
+    $newPhone = trim($_POST['newPhone']);
+    $newEmail = trim($_POST['newEmail']);
+    $newUsername = trim($_POST['newUsername']);
+    $newPassword = trim($_POST['newPassword']);
+    $passwordConfirm = trim($_POST['passwordConfirm']);
 
-newUserFirstName($newFirstName);
-newUserLastName($newLastName);
-newUserEmail($newEmail);
-newUserPhone($newPhone);
-newUser_Name($newUsername);
-confirmPassword($newPassword, $passwordConfirm);
+    newUserFirstName($newFirstName);
+    newUserLastName($newLastName);
+    newUserEmail($newEmail);
+    newUserPhone($newPhone);
+    newUser_Name($newUsername);
+    confirmPassword($newPassword, $passwordConfirm);
 
-$checkFirstName = $_SESSION['checkFirstName'];
-$checkLastName = $_SESSION['checkLastName'];
-$checkEmail = $_SESSION['checkEmail'];
-$checkPhone = $_SESSION['checkPhone'];
-$checkUsername = $_SESSION['checkUsername'];
-$passwordCheck = $_SESSION['passwordCheck'];
+    $checkFirstName = $_SESSION['checkFirstName'];
+    $checkLastName = $_SESSION['checkLastName'];
+    $checkEmail = $_SESSION['checkEmail'];
+    $checkPhone = $_SESSION['checkPhone'];
+    $checkUsername = $_SESSION['checkUsername'];
+    $passwordCheck = $_SESSION['passwordCheck'];
+
     if($checkFirstName && $checkLastName && $checkEmail && $checkPhone && $checkUsername && $passwordCheck) {
         addUser($newFirstName, $newLastName, $newEmail, $newPhone, $newUsername, $newPassword);
         $_SESSION['newEmail'] = $newEmail;
@@ -40,25 +41,25 @@ $passwordCheck = $_SESSION['passwordCheck'];
         header('Location: confirmNewUser.php');
         exit;
     }
-    
-if($checkFirstName && $checkLastName && $checkEmail && $checkPhone && $checkUsername && $passwordCheck) {
-    addUser($newFirstName, $newLastName, $newEmail, $newPhone, $newUsername, $newPassword);
-    $_SESSION['newEmail'] = $newEmail;
-    $_SESSION['newCell'] = $newPhone;
-    header('Location: confirmNewUser.php');
-    exit;
-} else {
-    $_SESSION['errorCheck'] = errorShow($checkFirstName, $checkLastName, $checkEmail, $checkPhone, $checkUsername, $passwordCheck);
-}
 
-// Error array
-$errorDisp = array( 'fnError' => array("First Name Error", "Your first name needs to be 3 characters or longer."),
-    'lnError' => array("Last Name Error", "Your last name needs to be 3 characters or longer."),
-    'emError' => array("Email Error", "Your email is not valid, please review and correct."),
-    'phError' => array("Phone Number Error", "Please enter your phone number in the correct format."),
-    'unError1' => array("Username Error 1", "Your username needs to be 6 characters or more."),
-    'pwError' => array("Password Error", "Your password needs to be 6 characters or longer and match the confirm password entry.")
-);
+    if($checkFirstName && $checkLastName && $checkEmail && $checkPhone && $checkUsername && $passwordCheck) {
+        addUser($newFirstName, $newLastName, $newEmail, $newPhone, $newUsername, $newPassword);
+        $_SESSION['newEmail'] = $newEmail;
+        $_SESSION['newCell'] = $newPhone;
+        header('Location: confirmNewUser.php');
+        exit;
+    } else {
+        $_SESSION['errorCheck'] = errorShow($checkFirstName, $checkLastName, $checkEmail, $checkPhone, $checkUsername, $passwordCheck);
+    }
+
+    // Error array
+    $errorDisp = array( 'fnError' => array("First Name Error", "Your first name needs to be 3 characters or longer."),
+        'lnError' => array("Last Name Error", "Your last name needs to be 3 characters or longer."),
+        'emError' => array("Email Error", "Your email is not valid, please review and correct."),
+        'phError' => array("Phone Number Error", "Please enter your phone number in the correct format."),
+        'unError1' => array("Username Error 1", "Your username needs to be 6 characters or more."),
+        'pwError' => array("Password Error", "Your password needs to be 6 characters or longer and match the confirm password entry.")
+    );
 ?>
 
 <!DOCTYPE html>
