@@ -8,6 +8,7 @@
 <?php
     session_start();
     include('validateUser.php');
+    $pageWasRefreshed = isset($_SERVER['HTTP_CACHE_CONTROL']) && $_SERVER['HTTP_CACHE_CONTROL'] === 'max-age=0';
 
     // Set the variables to pass to the validateUser form.
     $newFirstName = trim($_POST['newFirstName']);
@@ -82,14 +83,16 @@
     <div class="row">
         <div class="col-12 col-md-3 col-lg-3 empty1">
             <?php
-            // Check to see if the errorCheck array has content and if it does pull the errorDisp codes.
-            if(count($_SESSION['errorCheck'] > 0)) {
-                foreach ($_SESSION['errorCheck'] as $key => $value){
-                    echo ("<div class='alert alert-primary' role='alert'>
-                         <h4>" . $errorDisp[$value][0] . "</h4><h6>"  . $errorDisp[$value][1] . "</h6>
-                       </div>");
+            // Check to see if the errorCheck array has content and if it does pull the errorDisp code
+                if($pageWasRefreshed ) {
+                    if(count($_SESSION['errorCheck'] > 0)) {
+                        foreach ($_SESSION['errorCheck'] as $key => $value){
+                            echo ("<div class='alert alert-primary' role='alert'>
+                                 <h4>" . $errorDisp[$value][0] . "</h4><h6>"  . $errorDisp[$value][1] . "</h6>
+                               </div>");
+                        }
+                    }
                 }
-            }
             ?>
         </div>
         <div class="col-12 col-md-6 col-lg-6 login">

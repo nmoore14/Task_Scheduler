@@ -12,10 +12,6 @@ require './PHPMailer-master/src/SMTP.php';
 session_start();
 $userEmail = $_SESSION['newEmail'];
 $newUserName = $_SESSION['newUser'];
-<<<<<<< HEAD
-=======
-
->>>>>>> 59f614fd9dbf36769f108856b4179895c534e06c
 
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
 
