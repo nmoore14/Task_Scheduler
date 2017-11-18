@@ -54,63 +54,73 @@ function getUsersFirstName($userName){
 }
 
 function newUserFirstName($newFirstName) {
-    $checkFirstName = false;
-    if(strlen($newFirstName) >= 3) {
-        $checkFirstName = true;
-        $_SESSION['checkFirstName'] = $checkFirstName;
-    } else {
-        $_SESSION['checkFirstName'] = $checkFirstName;
+    $checkFirstName;
+    if($newFirstName != ' ') {
+        if(strlen($newFirstName) >= 3) {
+            $checkFirstName = true;
+            $_SESSION['checkFirstName'] = $checkFirstName;
+        } else {
+            $checkFirstName = false;
+            $_SESSION['checkFirstName'] = $checkFirstName;
+        }
     }
 }
 
 function newUserLastName($newLastName) {
-    $checkLastName = false;
-    if(strlen($newLastName) >= 3) {
-        $checkLastName = true;
-        $_SESSION['checkLastName'] = $checkLastName;
-    } else {
-        $_SESSION['checkLastName'] = $checkLastName;
+    $checkLastName;
+    if($newLastName != ' ') {
+        if(strlen($newLastName) >= 3) {
+            $checkLastName = true;
+            $_SESSION['checkLastName'] = $checkLastName;
+        } else {
+            $checkLastName = false;
+            $_SESSION['checkLastName'] = $checkLastName;
+        }
     }
 }
 
 function newUserEmail($newEmail) {
-    $checkEmail = false;
+    $checkEmail;
     if(filter_var($newEmail, FILTER_VALIDATE_EMAIL)) {
         $checkEmail = true;
         $_SESSION['checkEmail'] = $checkEmail;
     } else {
+        $checkEmail = false;
         $_SESSION['checkEmail'] = $checkEmail;
     }
 }
 
 function newUserPhone($newPhone) {
-    $checkPhone = false;
+    $checkPhone;
     if(preg_match("/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/", $newPhone)) {
         $checkPhone = true;
         $_SESSION['checkPhone'] = $checkPhone;
     } else {
+        $checkPhone = false;
         $_SESSION['checkPhone'] = $checkPhone;
     }
 }
 
 function newUser_Name($newUsername) {
-    $checkUsername = false;
+    $checkUsername;
     if(strlen($newUsername) >= 6){
         $checkUsername = true;
         $_SESSION['checkUsername'] = $checkUsername;
     } else {
+        $checkUsername = false;
         $_SESSION['checkUsername'] = $checkUsername;
     }
 }
 
 function confirmPassword($newPassword, $passwordConfirm) {
-    $passwordCheck = false;
+    $passwordCheck;
     if($newPassword != '' && strlen($newPassword) >= 6) {
         if($newPassword == $passwordConfirm) {
             $passwordCheck = true;
             $_SESSION['passwordCheck'] = $passwordCheck;
         }
     } else {
+        $passwordCheck = false;
         $_SESSION['passwordCheck'] = $passwordCheck;
     }
 }
